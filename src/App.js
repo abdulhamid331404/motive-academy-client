@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h1>This is MOtive Academy</h1>
+      <h1>This is app part</h1>
     </div>
   );
 }
