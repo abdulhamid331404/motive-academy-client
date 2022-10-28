@@ -33,11 +33,11 @@ const handleLogIn = event =>{
         <Button variant="success" size="lg"><FaGoogle/> Sin In With Google
       </Button><br />
       <br />
-        <Button variant="success" size="lg"><FaGithub/>
-        Sig In With Github
+        <Button variant="success" size="lg"> <FaGithub/> 
+            SinIn With Github
       </Button><br />
       <br />
-      {/* AiFillGithub */}
+     
         <Button variant="primary" type="submit">
           Submit
         </Button>

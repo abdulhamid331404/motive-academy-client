@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link, useLoaderData } from 'react-router-dom';
 import './CoursesDetails.css'
 
 const CoursesDetails = () => {
@@ -19,7 +20,7 @@ const CoursesDetails = () => {
                 <h1>{course}</h1>
                 <h6><u> <b>Instructor: </b> </u>  <strong> {instructor}</strong> </h6>
                 <p> <b>Course Details:</b> {description}</p>
-    
+               <Link to={'/login'}> <Button>Get premium access</Button></Link>
             </div>
         </div>
     );

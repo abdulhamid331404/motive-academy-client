@@ -26,7 +26,7 @@ const Course = ({coursed}) => {
                    </Link>
                 </div>
                 <div className='btn btn-success'>
-                    <Link  className='text-light'>Get Premium</Link>
+                    <Link  className='text-light'>Get premium access</Link>
                 </div>
             </div>
         </div>
