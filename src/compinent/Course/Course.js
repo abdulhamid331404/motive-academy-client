@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import './course.css'
 
 const Course = ({coursed}) => {
-    console.log(coursed);
-    const { id, course, fee, img, instructor} = coursed
+    const { course, fee, img, instructor} = coursed
     return (
-        <div className='course-container'>
+       <div className='course-container'>
             <div className='course-banner'>
         <img src={img} alt=""  className='bg-dark'/>
             </div>
@@ -21,7 +20,7 @@ const Course = ({coursed}) => {
                 </div>
             </div>
             <div className='button-container'>
-                <div className='course-details btn btn-success'>
+                <div className='btn btn-success'>
                    <Link className='text-light' 
                   to={`/courses/${coursed.id}`} >Course Details
                    </Link>
@@ -31,6 +30,8 @@ const Course = ({coursed}) => {
                 </div>
             </div>
         </div>
+
+   
     );
 };
 

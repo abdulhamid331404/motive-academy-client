@@ -1,0 +1,19 @@
+.course-containers{
+  margin:30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-img img{
+    width: 550px;
+    height: 400px;
+    margin-left: 0px;
+}
+.course-details{
+width: 500px;
+height: 400px;
+padding: 20px;
+align-items: center;
+border: 1px solid gray;
+border-radius: 0px  5px 5px 0px;
+}
