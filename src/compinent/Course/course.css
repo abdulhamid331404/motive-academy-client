@@ -1,0 +1,30 @@
+.course-container{
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: cornsilk;
+}
+.course-detail{
+    padding: 5px;
+}
+.course-banner img{
+    width: 400px;
+    height: 300px;
+}
+/* .course-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+} */
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    position:static;
+    bottom: 0;
+}
+.button-container div a{
+    text-decoration: none;
+}
