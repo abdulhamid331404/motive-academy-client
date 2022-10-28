@@ -3,10 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { FaGoogle,FaGithub } from "react-icons/fa";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import app from '../../firebase/firebase.config'
 
+const auth = getAuth(app);
 
 const LogIn = () => {
-
 
 const handleLogIn = event =>{
     event.preventDefault();
@@ -14,6 +16,14 @@ const handleLogIn = event =>{
     const email = form.email.value;
     const password = form.password.value;
 
+      createUserWithEmailAndPassword(auth, email, password)
+      .then(result =>{
+        const user = result.user
+        form.reset();
+        })
+      .catch((error) =>{
+        console.error('error', error);
+      } )
     console.log(email, password);
 }
 
