@@ -3,12 +3,33 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { FaGoogle,FaGithub } from "react-icons/fa";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from '../../firebase/firebase.config'
 
 const auth = getAuth(app);
-
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 const LogIn = () => {
+
+  const sinInWithGoogle = () =>{
+    signInWithPopup(auth, googleProvider)
+    .then(result =>{
+      const user = result.user
+      })
+    .catch((error) =>{
+      console.error('error', error);
+    } )
+  }
+
+  const sinInWithGithub = () =>{
+    signInWithPopup(auth, githubProvider)
+    .then(result =>{
+      const user = result.user
+      })
+    .catch((error) =>{
+      console.error('error', error);
+    } )
+  }
 
 const handleLogIn = event =>{
     event.preventDefault();
@@ -40,10 +61,10 @@ const handleLogIn = event =>{
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" name='password' required />
         </Form.Group>
-        <Button variant="success" size="lg"><FaGoogle/> Sin In With Google
+        <Button onClick={sinInWithGoogle} variant="success" size="lg"><FaGoogle/> Sin In With Google
       </Button><br />
       <br />
-        <Button variant="success" size="lg"> <FaGithub/> 
+        <Button onClick={sinInWithGithub}  variant="success" size="lg"> <FaGithub/> 
             SinIn With Github
       </Button><br />
       <br />
